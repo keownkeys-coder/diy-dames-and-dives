@@ -1,0 +1,13 @@
+---
+const { platform, username } = Astro.props;
+//    "iTunes","music.apple.com/us/artist/qn/1594933461"
+//    "Deezer","en/artist/151178412"
+//    "TIDAL", "artist/29252755"
+//    "Linktr.ee", "FriendQN"
+//    "github" username="keownkeys-coder"
+//  "YouTube" username="@themusicalqn"
+//"Instagram" username ="linette_aka_qn"
+//"Bandcamp" username ="keown"
+//"Spotify" username="open.spotify.com/playlist/4ol8wk7yFBy21l7mEZnYJs"
+---
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
