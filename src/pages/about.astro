@@ -1,4 +1,19 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/style.css';
+
+const pageTitle ="About Me";
+const identity = {
+    firstName: "Linette",
+    country: "The United States",
+    occupation: "musician aka jobless and homeless lmao",
+    hobbies: ["animation","music","teaching","learning","drawing","watching movies","watching tv showes"],
+};
+const skills = ["HTML","CSS","Google Sheets like hella",];
+
+const finished = false;
+const happy = true;
+const goal = 7;
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -7,16 +22,35 @@ import Layout from '../layouts/Layout.astro';
 //https://github.com/keownkeys-coder/diy-dames-and-dives
 //https://diy-dames-and-dives.netlify.app/
 ---
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
 
 <body>
+<Navigation />
+    <h1>{pageTitle}</h1>
 
 <h1>hello!</h1>
-<p><a href="https://keown.bandcamp.com/follow_me">click this shit!
-</a> 
+<p><a href="https://keown.bandcamp.com/follow_me">click this shit!</a> 
 </p>
-
-
+<p>if youre wanning to lurn some mores about me HERE YA HO!!</p>
+<ul>
+    <li>my name is {identity.firstName}</li>
+    <li>as unfortunate as it is for the state of the world i do live in {identity.country} while also being a {identity.occupation}</li>
+    {identity.hobbies.length >= 2 &&
+    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+  }
+</ul>
+<p>My skills are:</p>
+<ul>
+  {skills.map((skill) => <li>{skill}</li>)}
+</ul>
+{happy && <p>im not dead yet!</p>}
+{finished && <p>IM DONE!!! BICH!!! TUTROAILA LALALA COMPLETE</p>}
+{goal === 7? <p>my goal is to finish the tutorial in a week</p> : <p>my goal is not 7 days</p>}
 	
 	
 </content>
