@@ -1,4 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/style.css';
+
 const pageTitle ="About Me";
 const identity = {
     firstName: "Linette",
@@ -27,10 +30,9 @@ import Layout from '../layouts/Layout.astro';
   </head>
 
 <body>
+<Navigation />
     <h1>{pageTitle}</h1>
-<a href="/">Homepage!</a>
-<a href="/about/">about!</a>
-<a href="/blog/">bloggog</a>
+
 <h1>hello!</h1>
 <p><a href="https://keown.bandcamp.com/follow_me">click this shit!</a> 
 </p>
