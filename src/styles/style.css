@@ -77,7 +77,7 @@ article{
 	
 	max-height:100vh;
 	align-content:center;
-	background:beige url("sidebar.jpg") center/ 50vh no-repeat ;
+	background:beige url(/src/assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
 	box-sizing:border-box;
 	background-size: cover;
 }
@@ -110,4 +110,6 @@ body{
 	background-color: #F9FAF4;
 	color: #FD9612;
 }
-
+.menu{
+	display:none;
+}
