@@ -1,7 +1,29 @@
 ---
-
+import Social from "./Social.astro"
+//github, instagram, facebook, tumblr nnah lol
+//bandcamp, linktree, spotify, itunes, amazon, deezer, soundcloud, youtube
+//const { platform, usernameID, platformName}
+// <Social platform="" usernameID="" platformName="" />
 ---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
 
 <footer>
-    <p> watch me massacre some code over on <a href=</p>
+    <ul>
+        <li>
+            you'll never stop me bangin out the tunes but you can listen at <Social platform="https://keown.bandcamp.com" usernameID="/" platformName="Bandcamp" /> or listen to me listen at <Social platform="bandcamp.com" usernameID="/Keown" platformName="my bandcamp collection"
+        </li>
+        <li>watch me massacre some code over on <Social platform="https://github.com" usernameID="/keownkeys-coder" platformName="github" /></li>
+        <li>my directorial debut on <Social platform="https://www.youtube.com" usernameID="@themusicalqn" platformName="YouTube" /> </li>
+        <li>
+            see my bodyodyodyody over on <Social platform="https://www.instagram.com/" usernameID="linette_aka_qn" platformName="Instagram" />
+        </li>
+        <li> </li>
+    </ul>
+ 
 </footer>

@@ -1,5 +1,5 @@
 ---
-//github, instagram, facebook, tumblr nnah lol
-//bandcamp, linktree, spotify, itunes, amazon, deezer, soundcloud
-//
+
+const { platform, usernameID, platformName} = Astro.props;
 ---
+<a href={`${platform}/${usernameID}`}>{platformName}</a>
