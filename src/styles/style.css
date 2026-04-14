@@ -34,7 +34,7 @@ article{
 	width: auto;
 	display: none;
 	align-content:center;
-	background:beige url("sidebar.jpg") center/ 50vh no-repeat ;
+	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
 	box-sizing:border-box;
 	background-size: cover;
 }
