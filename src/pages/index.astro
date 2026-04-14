@@ -1,24 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import '../styles/style.css';
-const pageTitle="Home";
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-//https://github.com/keownkeys-coder/diy-dames-and-dives
-//https://diy-dames-and-dives.netlify.app/
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home Page";
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-<Navigation />
-
-	<h1>hi!</h1>
-
-<Footer />
+<BaseLayout>
+   <h2> where does this go?</h2>
+</BaseLayout>

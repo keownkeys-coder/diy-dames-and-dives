@@ -7,18 +7,77 @@ transition: all 0.3s
 h1{
 	text-align:center;
 }
+:has(.openSidebar[aria-expanded="true"]) #receipt{
+	display: unset;
+}
 .openSidebar{
 	background-color: #F9FAF4;
 	color: #FD9612;
 
 }
-.closeSidebar{
- display:none;
-}
+
 .hidden{
 	display:none;
 }
-.grid{
+
+
+
+article{
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#receipt{
+	width: auto;
+	display: none;
+	align-content:center;
+	background:beige url("sidebar.jpg") center/ 50vh no-repeat ;
+	box-sizing:border-box;
+	background-size: cover;
+}
+li:hover,
+li:focus{
+	background-color:yellow;
+}
+content{
+	text-align:center;
+  
+}
+
+.sidebar{
+	
+
+	color:black;
+	text-align:center;
+	font-family: "Times New Roman",Times;
+	align-items: stretch;
+	
+}
+body{
+	font-size:22px;
+	color:#fca431;
+	background-color:#f4f5ee;
+	font-style:normal;
+	
+}
+/* add [data-filter="whatever tag"] to change specific tag colors*/
+.tag.active {
+	background-color: #F9FAF4;
+	color: #FD9612;
+}
+/* all below is for desktop screens */
+
+@media screen and (min-width: 636px) {
+	#receipt{
+	position: sticky;
+	top:0;
+	display: block;
+	max-height:100vh;
+	}
+	.grid{
 
 
 	display:grid;
@@ -61,53 +120,9 @@ grid-column:1/4;
 	padding: 0; /* Remove padding */
 	margin: 0; /* Remove margins */
 }
+.openSidebar{
+	display: none;
+}
+} /*end of desktop CSS */
 
-
-article{
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 20px;
-	text-align: center;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-#receipt{
-	position: sticky;
-	top:0;
-	
-	max-height:100vh;
-	align-content:center;
-	background:beige url("sidebar.jpg") center/ 50vh no-repeat ;
-	box-sizing:border-box;
-	background-size: cover;
-}
-li:hover{
-	background-color:yellow;
-}
-content{
-	text-align:center;
-  
-}
-
-.sidebar{
-	
-
-	color:black;
-	text-align:center;
-	font-family: "Times New Roman",Times;
-	align-items: stretch;
-	
-}
-body{
-	font-size:22px;
-	color:#fca431;
-	background-color:#f4f5ee;
-	font-style:normal;
-	
-}
-/* add [data-filter="whatever tag"] to change specific tag colors*/
-.tag.active {
-	background-color: #F9FAF4;
-	color: #FD9612;
-}
 
