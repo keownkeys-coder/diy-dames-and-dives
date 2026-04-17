@@ -18,14 +18,16 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-<body>
+<body class="grid">
   <Menu />
 <Navigation />
-
-	<h1>hi!</h1>
+<content class="tunes">
     <slot />
 
 <Footer />
+</content>
+
+
 <script>import "../Scripts/openSidebar.js";</script>
 
 </body>

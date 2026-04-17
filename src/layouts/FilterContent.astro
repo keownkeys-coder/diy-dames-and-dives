@@ -1,0 +1,42 @@
+---
+const {dataFilter} = Astro.props;
+const {header} = Astro.props;
+---
+<content class="tunes">
+	<h1 class="header">{header}</h1>	
+	<!--# add all the different music platforms you can find me on, ideally follow buttons just on the webpage -->
+	<h2 class= "filters">Filters</h2>
+		<section class="tag-filter"> <!--#  Make it so you can select Multiple tags, and then probably add tags for Genre (broad and super granular specfic maybe, Year released, maybe for instruments too? -->
+<!--# blank button for new buttons			<button class= "tag" data-filter=""></button> -->
+
+			<button class= "tag active" data-filter="all">All</button>
+			<button class= "tag" data-filter={dataFilter.class}>{dataFilter} </button>
+			<button class= "tag" data-filter="Solo Album 2">AD(in)D(ie)</button>
+			<button class= "tag" data-filter="Unreleased">Unreleased</button>
+			<button class= "tag" data-filter="User Mixes">User Mixes</button>
+			<button class= "tag" data-filter="rock">Rock</button>
+			<button class= "tag" data-filter="acoustic">Acoustic</button>
+			<button class= "tag" data-filter="indie">Indie</button>
+		</section>
+	
+	<ul class="items">
+		<li>
+			<article class="grid-item" data-category="Solo Album 1""indie">
+<h3>New Standards</h3>
+			<audio class="song" controls>
+				<source src="Music\scars\1.newstandards.wav" type="audio/wav">
+			get fucked sorry your browser doesnt support this!
+			</audio>
+			<button class= "filter-btn" data-filter="Solo Album 1">Scars, Stories & Subtle Subversions of the Same ol Song. Served With A Smile =) </button>
+			<button class= "filter-btn" data-filter="indie">Indie</button>
+			</article>
+		</li>
+		
+
+	</ul>
+
+<img src="omg its me.jpg" width="300" height="600"  alt="What a dame to dive into!!! also images in the same directory as the html file being loaded don't need the full address path unless its going further down">
+
+	
+	
+</content>

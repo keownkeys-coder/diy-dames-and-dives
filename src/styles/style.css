@@ -7,6 +7,9 @@ transition: all 0.3s
 h1{
 	text-align:center;
 }
+h2{
+	text-align: center;
+}
 :has(.openSidebar[aria-expanded="true"]) #receipt{
 	display: unset;
 }
@@ -31,7 +34,6 @@ article{
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #receipt{
-	width: auto;
 	display: none;
 	align-content:center;
 	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
@@ -72,9 +74,10 @@ body{
 
 @media screen and (min-width: 636px) {
 	#receipt{
+		
 	position: sticky;
 	top:0;
-	display: block;
+	display: inline-flex;
 	max-height:100vh;
 	}
 	.grid{
