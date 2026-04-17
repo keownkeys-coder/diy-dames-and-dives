@@ -1,35 +1,23 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import '../styles/style.css';
+import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true}));
 const pageTitle ="blogagog";
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 //https://github.com/keownkeys-coder/diy-dames-and-dives
 //https://diy-dames-and-dives.netlify.app/
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-
-<body>
-<Navigation />
+<BaseLayout>
 
 <h1>hello! im INSANE and a rambler</h1>
 <p>have some blog posts!</p>
 <ul>
-    <li> <a href="/posts/post-1/">day 1 :|</a></li>
+  {allPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
 </ul>
 
-
-
-	
-	
-</content>
-
-</body>
+</BaseLayout>

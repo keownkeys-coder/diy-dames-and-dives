@@ -1,7 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import '../styles/style.css';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle ="About Me";
 const identity = {
     firstName: "Linette",
@@ -20,15 +20,7 @@ const goal = 7;
 //https://github.com/keownkeys-coder/diy-dames-and-dives
 //https://diy-dames-and-dives.netlify.app/
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-
-<body>
-<Navigation />
+<BaseLayout>
     <h1>{pageTitle}</h1>
 
 <h1>hello!</h1>
@@ -49,8 +41,4 @@ const goal = 7;
 {happy && <p>im not dead yet!</p>}
 {finished && <p>IM DONE!!! BICH!!! TUTROAILA LALALA COMPLETE</p>}
 {goal === 7? <p>my goal is to finish the tutorial in a week</p> : <p>my goal is not 7 days</p>}
-	
-	
-</content>
-
-</body>
+</>
