@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
 const pageTitle = "Home Page";
 ---
-<BaseLayout>
+<BaseLayout {pageTitle}>
+    
+    <Greeting client:load messages={["whats up slut?","sorry :((","you made it!!! wow ur tits look great :D!!!","oh yeah click that button boo","have u tried clicking the Gimme Money thing that buttons sick as fuck"]} />
 </BaseLayout>
