@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const pageTitle = "Tag Index";
+---
+
+<BaseLayout {pageTitle}>
+    <section class="tags">
+        <ul>
+        {tags.map((tag) => (
+
+        <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>))}
+        </ul>
+    </section>
+
+</BaseLayout>

@@ -4,11 +4,23 @@
 nav{
 transition: all 0.3s
 }
-h1{
-	text-align:center;
-}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
+h1,
 h2{
-	text-align: center;
+	text-align:center;
 }
 :has(.openSidebar[aria-expanded="true"]) #receipt{
 	display: unset;
@@ -40,6 +52,20 @@ article{
 	box-sizing:border-box;
 	background-size: cover;
 }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
 li:hover,
 li:focus{
 	background-color:yellow;

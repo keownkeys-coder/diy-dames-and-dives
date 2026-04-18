@@ -1,23 +1,12 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import '../styles/style.css';
-import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true}));
-const pageTitle ="blogagog";
-
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-//https://github.com/keownkeys-coder/diy-dames-and-dives
-//https://diy-dames-and-dives.netlify.app/
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const pageTitle = "Deranged type Blogalog";
 ---
-<BaseLayout>
-
-<h1>hello! im INSANE and a rambler</h1>
-<p>have some blog posts!</p>
-<ul>
-  {allPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
-</ul>
-
+<BaseLayout pageTitle={pageTitle}>
+  <p>my insane ramblings here for convenience</p>
+  <ul>
+{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
 </BaseLayout>
