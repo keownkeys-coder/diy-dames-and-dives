@@ -1,7 +1,6 @@
 ---
-
 title: 'Going Down Tutorial Road'
-pubDate: April 18th 2026
+pubDate: 04-18-2026
 description: 'getting absolutley molly whopped by the tutorial now'
 author: 'Clo$ Money'
 image:

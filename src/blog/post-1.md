@@ -1,7 +1,6 @@
 ---
-
 title: 'My First Blog Post'
-pubDate: April 9th 2026
+pubDate: 04-09-2026
 description: 'screaming crying throwing up following a tutorial'
 author: 'Clo$ Money'
 image:
