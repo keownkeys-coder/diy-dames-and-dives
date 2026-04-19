@@ -4,6 +4,15 @@
 nav{
 transition: all 0.3s
 }
+.header{
+	display:inline-flex;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 .tags {
     display: flex;
@@ -23,7 +32,8 @@ h2{
 	text-align:center;
 }
 :has(.openSidebar[aria-expanded="true"]) #receipt{
-	display: unset;
+	display:block flow;
+	align-self: center;
 }
 .openSidebar{
 	background-color: #F9FAF4;
@@ -46,7 +56,7 @@ article{
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #receipt{
-	display: none;
+	display:none;
 	align-content:center;
 	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
 	box-sizing:border-box;
@@ -105,7 +115,9 @@ body{
 
   :global(.dark) .sun { fill: transparent; }
   :global(.dark) .moon { fill: white; }
-  html.dark {
+  
+/*dark css */  
+html.dark {
   background-color: #0d0950;
   color: #fff;
 }
@@ -127,16 +139,10 @@ body{
 .dark a {
   color: #ff9776;
 }
+/*all above is dark screen */
 /* all below is for desktop screens */
 
 @media screen and (min-width: 636px) {
-	#receipt{
-		
-	position: sticky;
-	top:0;
-	display: inline-flex;
-	max-height:100vh;
-	}
 	.grid{
 
 
@@ -147,7 +153,24 @@ body{
 
 	
 }
+	#receipt{
+		
+	position: sticky;
+	top:0;
+	display: flex;
+	min-height: 100vh;
+	max-height:100vh;
+	}
+
+p,
+ul,
+.header
+{
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
 h1{
+		grid-row-start: 1;
 	grid-column-start:1;
 	grid-column-end:4;
 }
@@ -170,6 +193,15 @@ h1{
 	grid-row-gap:5px;
 grid-auto-rows: minmax(0, auto);
 }
+.footer{
+	order:2;
+	
+	
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+
+}
 .items{
 	display:grid;
 grid-template-columns: subgrid;
@@ -179,9 +211,6 @@ grid-column:1/4;
 	list-style-type: none; /* Remove bullets */
 	padding: 0; /* Remove padding */
 	margin: 0; /* Remove margins */
-}
-.openSidebar{
-	display: none;
 }
 } /*end of desktop CSS */
 

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+
 title: 'Going Down Tutorial Road'
 pubDate: April 18th 2026
 description: 'getting absolutley molly whopped by the tutorial now'

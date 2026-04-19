@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+
 title: 'My First Blog Post'
 pubDate: April 9th 2026
 description: 'screaming crying throwing up following a tutorial'

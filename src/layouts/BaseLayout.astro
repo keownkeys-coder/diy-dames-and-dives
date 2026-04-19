@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import '../styles/style.css';
 import Footer from '../components/Footer.astro';
@@ -19,8 +20,9 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
 <body class="grid">
-  <Menu />
-<Navigation />
+<Header />
+<Navigation>
+  </Navigation> 
 <content class="tunes">
     <slot />
 

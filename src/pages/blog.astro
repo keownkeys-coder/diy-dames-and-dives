@@ -1,12 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+import { getCollection } from 'astro:content';
+//const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));    //non-collection based
+
 const pageTitle = "Deranged type Blogalog";
+const allPosts =  await getCollection("blog");//collection based
 ---
 <BaseLayout pageTitle={pageTitle}>
   <p>my insane ramblings here for convenience</p>
-  <ul>
-{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+  <ul> 
+    { 
+     allPosts.map((post) => (
+      <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
+     ))
+    }
   </ul>
 </BaseLayout>
