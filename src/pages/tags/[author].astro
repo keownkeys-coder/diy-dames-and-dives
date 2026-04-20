@@ -5,24 +5,24 @@ import BlogPost from '../../components/BlogPost.astro';
 export async function getStaticPaths() {
     const allPosts = await getCollection("blog");
 
-      const uniqueTags = [...new Set(allPosts.flatMap((post) => (post.data.tags) ))];
+      const uniqueAuthors = [...new Set(allPosts.flatMap((post) => (post.data.author) ))];
+    
 
-
-return uniqueTags.map((tag) => {
-  const filteredTags = allPosts.filter((post) => post.data.tags.includes(tag));
+return uniqueAuthors.map((author) => {
+  const filteredPosts = allPosts.filter((post) => (post.data.author).includes(author));
   return {
-    params: { tag },
-    props: { posts: filteredTags },
+    params: { author },
+    props: { posts: filteredPosts },
   };
 });
 }
 
-const { tag } = Astro.params;
+const { author } = Astro.params;
 const { posts } = Astro.props;
 //const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
 ---
-<BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
+<BaseLayout pageTitle={author}>
+  <p>Posts written by {author}</p>
     <ul>
         {posts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title}/>)}
 <!--    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}  -->
