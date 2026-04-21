@@ -84,13 +84,13 @@ content{
 .nav{
 	display:inherit;
 	justify-content: space-evenly;
-	text-align: center;
+	text-align: left;
 	flex-direction: column;
 }
 .sidebar{
 	
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: start;
 	color:black;
 	text-align:center;
 	font-family: "Times New Roman",Times;
@@ -168,7 +168,7 @@ body{
 	}
 	#receipt{
 	display:none;
-	align-self: center;
+
 	}
 }
 	.grid{
