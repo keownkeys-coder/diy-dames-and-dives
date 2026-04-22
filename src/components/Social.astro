@@ -1,9 +1,9 @@
 ---
-//import Image from "astro/components/Image.astro";
+import Image from "astro/components/Image.astro";
+
 
 const { platform, usernameID, platformName, logo} = Astro.props;
 ---
 <a href={`${platform}/${usernameID}`}>
-    <img src={logo} alt={platformName} class="logo" 
-    />
+    <Image class="logo" src={logo} alt={platformName}/>
 </a>

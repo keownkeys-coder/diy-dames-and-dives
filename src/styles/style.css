@@ -15,8 +15,9 @@ li{
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .logo{
-	margin-block: 2.5rem;
-    border-radius: 0.75rem;
+	width: 2rem;
+	height: 2rem;
+	fill: #FD9612;
 }
 .tags {
     display: flex;
