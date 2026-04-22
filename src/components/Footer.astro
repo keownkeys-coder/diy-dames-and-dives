@@ -1,10 +1,13 @@
 ---
-import Social from "./Social.astro"
-import KofiLogo from "../assets/pictures/Brands/kofi_day.svg"
-import BandcampLogo from '../assets/pictures/Brands/bandcampIcon.svg'
-import InstagramLogo from '../assets/pictures/Brands/instagram-167-svgrepo-com.svg'
-import YoutubeLogo from '../assets/pictures/Brands/youtube-168-svgrepo-com.svg'
-import GithubLogo from '../assets/pictures/Brands/github-142-svgrepo-com.svg'
+//import { Svg } from 'astro:components';
+import Social from "./Social.astro";
+
+
+import KofiLogo from "../assets/pictures/svg/kofi_day.svg";
+import BandcampLogo from '../assets/pictures/svg/bandcampIcon.svg';
+import InstagramLogo from '../assets/pictures/svg/instagram-167-svgrepo-com.svg';
+import YoutubeLogo from '../assets/pictures/svg/youtube-168-svgrepo-com.svg';
+import GithubLogo from '../assets/pictures/svg/github-142-svgrepo-com.svg';
 //github, instagram, facebook, tumblr nnah lol
 //bandcamp, linktree, spotify, itunes, amazon, deezer, soundcloud, youtube
 //const { platform, usernameID, platformName}
@@ -15,17 +18,17 @@ import GithubLogo from '../assets/pictures/Brands/github-142-svgrepo-com.svg'
 <footer class="footer">
     <ul class="tags">
         <li class="tag"> 
-        gimme MONEY over at <Social platform="https://ko-fi.com" usernameID="linettie" platformName="Ko-fi" /><KofiLogo class="logo" />
+        gimme MONEY over at <Social platform="https://ko-fi.com" usernameID="linettie" logo="../pictures/svg/dark.svg" platformName="Ko-fi"  />
         </li>
         <li class="tag">
 	
-        you'll never stop me bangin out the tunes but you can listen at <Social platform="https://keown.bandcamp.com" usernameID="/" platformName="Bandcamp" /> or listen to me listen at <Social platform="bandcamp.com" usernameID="Keown" platformName="my bandcamp collection" /><BandcampLogo class="logo" fill="#FD9612"/>
+        you'll never stop me bangin out the tunes but you can listen at <Social platform="https://keown.bandcamp.com" usernameID="/" platformName="Bandcamp" logo="../pictures/svg/bandcampIcon.svg"/> or listen to me listen at <Social platform="bandcamp.com" usernameID="Keown" platformName="my bandcamp collection" /><!--<BandcampLogo fill="#FD9612"/> -->
         </li>
-        <li class="tag">watch me massacre some code over on <Social platform="https://github.com" usernameID="/keownkeys-coder" platformName="github" /><GithubLogo fill="currentColor"/></li>
-        <li class="tag">my directorial debut on <Social platform="https://www.youtube.com" usernameID="@themusicalqn" platformName="YouTube" /> <YoutubeLogo class="logo" fill="currentColor"/>
+        <li class="tag">watch me massacre some code over on <Social platform="https://github.com" usernameID="/keownkeys-coder" platformName="github" /></li>
+        <li class="tag">my directorial debut on <Social platform="https://www.youtube.com" usernameID="@themusicalqn" platformName="YouTube" />
         </li>
         <li class="tag">
-        see my bodyodyodyody over on <Social platform="https://www.instagram.com" usernameID="linette_aka_qn" platformName="Instagram" /> <InstagramLogo fill="currentColor"/>
+        see my bodyodyodyody over on <Social platform="https://www.instagram.com" usernameID="linette_aka_qn" platformName="Instagram" /> 
         </li>
     
     </ul>

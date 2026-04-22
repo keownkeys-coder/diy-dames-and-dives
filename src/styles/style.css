@@ -14,7 +14,10 @@ li{
 	text-align: center;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.logo{
+	margin-block: 2.5rem;
+    border-radius: 0.75rem;
+}
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +101,7 @@ content{
 	
 }
 body{
-	font-size:22px;
+	font-size:1rem;
 	color:#fca431;
 	background-color:#f4f5ee;
 	font-style:normal;
@@ -128,15 +131,13 @@ body{
 		color:deeppink;
 		background-color: #0d0950;
 	}
-	.dark .header{
-		background-color: blueviolet;
-
-	}
-	.dark footer{		
+	.dark footer,
+	.dark .header{	background-color: blueviolet;
+	
 	box-shadow:
-    0 0 60px 30px #fff,  /* inner white */
-    0 0 100px 60px #f0f, /* middle magenta */
-    0 0 140px 90px #0ff; /* outer cyan */
+    0 0 1rem 0.5rem #fff,  /* inner white */
+    0 0 2rem 1rem #f0f, /* middle magenta */
+    0 0 2.5rem 1.5rem #0ff; /* outer cyan */
 	}
 
 	.dark .menu {
