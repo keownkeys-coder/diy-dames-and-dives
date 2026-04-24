@@ -16,7 +16,7 @@
      transform="translate(-25.103375,-25.103379)">
     <path
        id="path1"
-       style="fill:#000000;stroke:none;stroke-width:2.98;stroke-linecap:square;stroke-miterlimit:8.5;paint-order:fill markers stroke"
+       style="fill:#800de2;stroke:none;stroke-width:2.98;stroke-linecap:square;stroke-miterlimit:8.5;paint-order:fill markers stroke"
        d="M 80.790934,25.103377 A 55.6875,55.6875 0 0 0 25.103377,80.790934 55.6875,55.6875 0 0 0 80.790934,136.47849 55.6875,55.6875 0 0 0 136.18652,86.486711 42.958927,40.483929 0 0 1 96.701591,111.02165 42.958927,40.483929 0 0 1 53.742973,70.537297 42.958927,40.483929 0 0 1 96.701591,30.053463 42.958927,40.483929 0 0 1 105.58787,30.929378 55.6875,55.6875 0 0 0 80.790934,25.103377 Z" />
   </g>
 </svg>

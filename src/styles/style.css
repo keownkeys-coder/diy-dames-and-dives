@@ -11,30 +11,31 @@ li{
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 20px;
+	max-height: 15vh;
 	text-align: center;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .logo{
-	width: 2rem;
-	height: 2rem;
+	width: 3rem;
+	height: 3rem;
 	fill: #FD9612;
 }
 .tags {
     display: flex;
-    flex-wrap: wrap;
+    max-height: min-content;
+	flex-direction: row;
+	justify-content: center;
   }
 
 .tag {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
     border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
+  
+    
     background-color: #F8FCFD;
   }
-ul{
-	text-align: center;
-}
+
 h1,
 h2{
 	text-align:center;
@@ -58,7 +59,9 @@ footer{
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 20px;
-	text-align: center;
+	align-content: last baseline;
+	align-self: last baseline;
+	max-height: 15vh;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 article{
@@ -67,6 +70,7 @@ article{
 	border-radius: 5px;
 	padding: 20px;
 	text-align: center;
+	
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #receipt{
@@ -94,6 +98,7 @@ content{
 	
 	display: flex;
 	justify-content: start;
+	font-size: large;
 	color:black;
 	text-align:center;
 	font-family: "Times New Roman",Times;
@@ -118,15 +123,22 @@ body{
     background: none;
   }
   .sun { fill: black; }
-  .moon { fill: transparent; }
+  .moon { fill: green; }
 
   :global(.dark) .sun { fill: transparent; }
-  :global(.dark) .moon { fill: white; }
+  :global(.dark) .moon { fill: purple; }
   
 /*dark css */  
 	html.dark {
 	background-color: #0d0950;
 	color: #fff;
+	}
+	.dark #receipt{
+		background: hotpink;
+		color: #000;
+		a{
+			color: #000;
+		}
 	}
 	.dark body{
 		color:deeppink;
@@ -184,7 +196,7 @@ body{
 	}
 
 	#receipt{
-		
+	
 	position: sticky;
 	top:0;
 	display: flex;
