@@ -2,10 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { getCollection } from 'astro:content';
+const allPosts = await getCollection("blog");
+const tags = [...new Set(allPosts.flatMap((post: any) => (post.data.tags)))];
+const authors = [...new Set(allPosts.flatMap((post: any) => (post.data.author)))];
 //const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));    //non-collection based
 
 const pageTitle = "Deranged type Blogalog";
-const allPosts =  await getCollection("blog");//collection based
+//collection based
 ---
 <BaseLayout pageTitle={pageTitle}>
   <p>my insane ramblings here for convenience</p>
@@ -15,5 +18,21 @@ const allPosts =  await getCollection("blog");//collection based
       <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
      ))
     }
+        <section class="tags">
+        <ul>
+        {tags.map((tag) => (
+
+        
+            <a href={`/tags/${tag}`}>
+                <li class="tag">{tag}</li>
+            </a>
+        ))}
+        {authors.map((tag) => (
+
+            <a href={`/tags/${tag}`}>
+                <li class="tag">{tag}</li>
+            </a>))}
+        </ul>
+    </section>
   </ul>
 </BaseLayout>

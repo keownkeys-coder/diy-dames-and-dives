@@ -12,10 +12,16 @@ const pageTitle = "Tag Index";
         <ul>
         {tags.map((tag) => (
 
-        <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>))}
+        
+            <a href={`/tags/${tag}`}>
+                <li class="tag">{tag}</li>
+            </a>
+        ))}
         {authors.map((tag) => (
 
-        <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>))}
+            <a href={`/tags/${tag}`}>
+                <li class="tag">{tag}</li>
+            </a>))}
         </ul>
     </section>
 

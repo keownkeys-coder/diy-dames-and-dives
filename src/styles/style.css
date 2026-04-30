@@ -1,23 +1,76 @@
 :root { 
   	overscroll-behavior: none;/* stop bounce */
 }
+body{
+	font-size:1em;
+	color:#fca431;
+	background-color:#f4f5ee;
+	font-style:normal;
+	
+}
+	.header{
+		
+		width: auto;
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 20px;
+		max-height: 15vh;
+		text-align: center;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+/* nav and side bar */
+	#receipt{
+		display:none;
+		align-content:center;
+		background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
+		box-sizing:border-box;
+		background-size: cover;
+	}
+		.sidebar{
+			
+			display: flex;
+			justify-content: start;
+			font-size: large;
+			color:black;
+			text-align:center;
+			font-family: "Times New Roman",Times;
+			align-items: stretch;
+			flex-direction: column;
+			
+		}
+			.dots{
+
+			border-bottom: 2px dotted black;
+			margin: 0 .5em .5em;
+			}
+			.nav{
+				display:inherit;
+				justify-content: space-evenly;
+				text-align: left;
+				flex-direction: column;
+			}
+	:has(.openSidebar[aria-expanded="true"]) #receipt{
+		display:block flow;
+		align-self: center;
+	}
+	.openSidebar{
+		background-color: #F9FAF4;
+		color: #FD9612;
+
+	}
+
+/* nav and side bar end*/
+li:hover,
+li:focus{
+	background-color:yellow;
+}
 li{
 	list-style-type: none;
 }
-.header{
-	
-	width: auto;
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 20px;
-	max-height: 15vh;
-	text-align: center;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 .logo{
-	width: 3rem;
-	height: 3rem;
+	width: 3em;
+	height: 3em;
 	fill: #FD9612;
 }
 .tags {
@@ -40,15 +93,7 @@ h1,
 h2{
 	text-align:center;
 }
-:has(.openSidebar[aria-expanded="true"]) #receipt{
-	display:block flow;
-	align-self: center;
-}
-.openSidebar{
-	background-color: #F9FAF4;
-	color: #FD9612;
 
-}
 
 .hidden{
 	display:none;
@@ -73,51 +118,19 @@ article{
 	
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-#receipt{
-	display:none;
-	align-content:center;
-	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
-	box-sizing:border-box;
-	background-size: cover;
-}
-li:hover,
-li:focus{
-	background-color:yellow;
-}
+
 content{
 	text-align:center;
   
 }
-.nav{
-	display:inherit;
-	justify-content: space-evenly;
-	text-align: left;
-	flex-direction: column;
-}
-.sidebar{
-	
-	display: flex;
-	justify-content: start;
-	font-size: large;
-	color:black;
-	text-align:center;
-	font-family: "Times New Roman",Times;
-	align-items: stretch;
-	flex-direction: column;
-	
-}
-body{
-	font-size:1rem;
-	color:#fca431;
-	background-color:#f4f5ee;
-	font-style:normal;
-	
-}
+
+
 /* add [data-filter="whatever tag"] to change specific tag colors*/
 .tag.active {
-	background-color: #F9FAF4;
+	background-color: #c7d96d;
 	color: #FD9612;
 }
+
   #themeToggle {
     border: 0;
     background: none;
@@ -132,6 +145,9 @@ body{
 	html.dark {
 	background-color: #0d0950;
 	color: #fff;
+	}
+	body.dark-theme svg.icon path {
+  fill: lightblue;
 	}
 	.dark #receipt{
 		background: hotpink;
