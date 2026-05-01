@@ -72,18 +72,7 @@ li{
 ul{
 	padding:0;
 }
-.logo{
-	width: 2.5em;
-	height: 2.5em;
 
-	fill: #FD9612;
-}
-.logoDark{
-	width: 2.5em;
-	height: 2.5em;
-	display:none;
-	fill: #FD9612;
-}
 .tags {
     display: grid;
     grid-template-rows: auto;
@@ -103,27 +92,6 @@ h1,
 h2{
 	text-align:center;
 }
-
-
-.hidden{
-	display:none;
-}
-footer{
-	
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-
-	justify-content: center;
-	align-self: last baseline;
-	max-height: 15vh;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.socials{ /* figure out where the FUCKING padding is coming from LOL */
-	display:grid;
-	grid-template-columns: repeat(7,1fr);
-
-}
 article{
 	background-color: white;
 	border: 1px solid #ccc;
@@ -139,14 +107,50 @@ content{
   
 }
 
+.hidden{
+	display:none;
+}
+	footer{
+		
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 5px;
 
-/* add [data-filter="whatever tag"] to change specific tag colors*/
+	
+		align-self: last baseline;
+		max-height: 15vh;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+		.socials{ /* figure out where the FUCKING padding is coming from LOL =i figured it out unordered lists have auto padding :rolleseyes:*/
+			display:grid;
+				place-content: center;
+			grid-template-columns:
+			 
+			repeat(7,1fr);
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+		.logo,
+		.logoDark{
+			width: 2.5em;
+			height: 2.5em;
+	
+			
+		}
+		.logoDark{
+			display:none;
+			
+		}
+
+
+
+/* add [data-filter="whatever tag"] to change specific tag colors
 .tag.active {
 	background-color: #c7d96d;
 	color: #FD9612;
 }
-	
-
+Not being used rn	
+*/
   #themeToggle {
     border: 0;
     background: none;
