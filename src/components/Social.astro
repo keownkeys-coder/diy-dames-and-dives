@@ -2,8 +2,9 @@
 import Image from "astro/components/Image.astro";
 
 
-const { platform, usernameID, platformName, logo} = Astro.props;
+const { platform, usernameID, platformName, logo, darkLogo} = Astro.props;
 ---
 <a href={`${platform}/${usernameID}`}>
-    <Image class="logo" src={logo} alt={platformName}/>
+    <Image class="logo" src={logo} alt={`${platformName}`}/>
+   <Image class="logoDark" src={darkLogo} alt={platformName}/>
 </a>

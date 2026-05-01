@@ -1,5 +1,14 @@
 ---
 //import { Svg } from 'astro:components';
+//github, instagram, facebook, tumblr nnah lol
+// gimme MONEY over at 
+//        you'll never stop me bangin out the tunes but you can listen at or listen to me listen at 
+//watch me massacre some code over on 
+//my directorial debut on 
+//see my bodyodyodyody over on
+//bandcamp, linktree, spotify, itunes, amazon, deezer, soundcloud, youtube
+//const { platform, usernameID, platformName}
+// <Social platform="" usernameID="" platformName="" />
 import Social from "./Social.astro";
 import BCLogo from "../assets/pictures/svg/bc.svg";
 import KofiLogo from "../assets/pictures/svg/kofi.svg";
@@ -10,39 +19,32 @@ import RSSLogo from "../assets/pictures/svg/rss.svg";
 import BC_Dark from "../assets/pictures/svg/bc_dark.svg";
 import Github_Dark from "../assets/pictures/svg/github_dark.svg";
 import YT_Dark from "../assets/pictures/svg/youtube_dark.svg";
-import IG_Dark from "../assets/pictures/svg/_dark.svg";
-import KofiDark from "../assets/pictures/svg/kofi_dark.svg";
-//github, instagram, facebook, tumblr nnah lol
-// gimme MONEY over at 
-//        you'll never stop me bangin out the tunes but you can listen at or listen to me listen at 
-//watch me massacre some code over on 
-//my directorial debut on 
-//see my bodyodyodyody over on
-//bandcamp, linktree, spotify, itunes, amazon, deezer, soundcloud, youtube
-//const { platform, usernameID, platformName}
-// <Social platform="" usernameID="" platformName="" />
+import IG_Dark from "../assets/pictures/svg/instagram_dark.svg";
+import Kofi_Dark from "../assets/pictures/svg/kofi_dark.svg";
+import RSS_Dark from "../assets/pictures/svg/rss_dark.svg";
+
 ---
 
 
 <footer class="footer">
     <ul class="socials">
         <li class="tag"> 
-        <Social platform="https://ko-fi.com" usernameID="linettie" logo={KofiLogo} platformName="Ko-fi"  />
+        <Social platform="https://ko-fi.com" usernameID="linettie" logo={KofiLogo} platformName="Ko-fi" darkLogo={Kofi_Dark} />
         </li>
         <li class="tag">
-	<Social platform="https://keown.bandcamp.com" usernameID="/" platformName="Bandcamp" logo={BCLogo}/>
-    </li>
-    <li class="tag">
-    <Social platform="https://bandcamp.com" usernameID="Keown" platformName="my bandcamp collection" logo={BCLogo} /><!--<BandcampLogo fill="#FD9612"/> -->
-        </li>
-        <li class="tag"><Social platform="https://github.com" usernameID="/keownkeys-coder" logo={GithubLogo}platformName="github" /></li>
-        <li class="tag"><Social platform="https://www.youtube.com" usernameID="@themusicalqn" logo={YTLogo} platformName="YouTube" />
+	    <Social platform="https://keown.bandcamp.com" usernameID="/" platformName="Bandcamp" logo={BCLogo}darkLogo={BC_Dark}/>
         </li>
         <li class="tag">
-         <Social platform="https://www.instagram.com" usernameID="linette_aka_qn" logo={IGLogo} platformName="Instagram" /> 
+        <Social platform="https://bandcamp.com" usernameID="Keown" platformName="my bandcamp collection" logo={BCLogo}darkLogo={BC_Dark} /><!--<BandcampLogo fill="#FD9612"/> -->
+        </li>
+        <li class="tag"><Social platform="https://github.com" usernameID="/keownkeys-coder" logo={GithubLogo}platformName="github" darkLogo={Github_Dark}/></li>
+        <li class="tag"><Social platform="https://www.youtube.com" usernameID="@themusicalqn" logo={YTLogo} platformName="YouTube"darkLogo={YT_Dark} />
         </li>
         <li class="tag">
-         <Social platform="https://diy-dames-and-dives.netlify.app/blog" usernameID="rss.xml" logo={RSSLogo} platformName="RSS Feed" /> 
+         <Social platform="https://www.instagram.com" usernameID="linette_aka_qn" logo={IGLogo} platformName="Instagram" darkLogo={IG_Dark}/> 
+        </li>
+        <li class="tag">
+         <Social platform="https://diy-dames-and-dives.netlify.app/blog" usernameID="rss.xml" logo={RSSLogo}darkLogo={RSS_Dark} platformName="RSS Feed" /> 
         </li>
     
     </ul>
