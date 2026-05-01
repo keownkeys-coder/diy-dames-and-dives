@@ -15,24 +15,25 @@ const pageTitle = "Deranged type Blogalog";
   <ul> 
     { 
      allPosts.map((post) => (
-      <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
+      <BlogPost url={`/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate.toLocaleDateString()}/>
      ))
     }
-        <section class="tags">
-        <ul>
+    </ul>
+        <section>
+        <ul class="tags">
         {tags.map((tag) => (
 
         
-            <a href={`/tags/${tag}`}>
-                <li class="tag">{tag}</li>
+            <a class="tag" href={`/tags/${tag}`}>
+                <li >{tag}</li>
             </a>
         ))}
         {authors.map((tag) => (
 
-            <a href={`/tags/${tag}`}>
-                <li class="tag">{tag}</li>
+            <a class= "tag" href={`/tags/${tag}`}>
+                <li>{tag}</li>
             </a>))}
         </ul>
     </section>
-  </ul>
+  
 </BaseLayout>

@@ -43,6 +43,7 @@ body{
 
 			border-bottom: 2px dotted black;
 			margin: 0 .5em .5em;
+
 			}
 			.nav{
 				display:inherit;
@@ -69,25 +70,25 @@ li{
 	list-style-type: none;
 }
 .logo{
-	width: 3em;
-	height: 3em;
+	width: 2.5em;
+	height: 2.5em;
+
 	fill: #FD9612;
 }
 .tags {
-    display: flex;
-    max-height: min-content;
-	flex-direction: row;
-	justify-content: center;
-  }
+    display: grid;
+    grid-template-rows: auto;
+	grid-auto-flow: column;
+}
 
 .tag {
-    margin: 0.25em;
+    margin: .25em;
     border: dotted 1px #a1a1a1;
     border-radius: .5em;
-  
-    
-    background-color: #F8FCFD;
-  }
+	padding: .5em;
+	background-color: #F8FCFD;
+	
+}
 
 h1,
 h2{
@@ -99,21 +100,26 @@ h2{
 	display:none;
 }
 footer{
-	display:grid;
+	
 	background-color: white;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	padding: 20px;
-	align-content: last baseline;
+	padding-right: 40px;
+	justify-content: center;
 	align-self: last baseline;
 	max-height: 15vh;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.socials{ /* figure out where the FUCKING padding is coming from LOL */
+	display:grid;
+	grid-template-columns: repeat(7,1fr);
+
 }
 article{
 	background-color: white;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	padding: 20px;
+
 	text-align: center;
 	
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

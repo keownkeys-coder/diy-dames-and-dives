@@ -27,4 +27,6 @@ const { posts } = Astro.props;
         {posts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title}/>)}
 <!--    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}  -->
   </ul>
+  <a href="/blog"><h2>
+    go back</h2></a>
 </BaseLayout>

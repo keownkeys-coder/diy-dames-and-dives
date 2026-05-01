@@ -21,5 +21,5 @@ export async function GET(context) {
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://diy-dames-and-dives.netlify.app/"
+  site: "https://diy-dames-and-dives.netlify.app"
 });

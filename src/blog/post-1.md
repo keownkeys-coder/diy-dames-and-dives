@@ -6,7 +6,7 @@ author: 'Clo$ Money'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning","webdev",]
+tags: ["astro", "blogging", "learning","webdev","markdown"]
 ---
 # My first blpg post
 wow this is _really_ hard lmao uhhh having to learn MARKDOWN??? but it'd be fun for me and alexa to use together haha.
