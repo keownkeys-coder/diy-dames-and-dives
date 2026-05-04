@@ -74,9 +74,9 @@ ul{
 }
 
 .tags {
-    display: grid;
-    grid-template-rows: auto;
-	grid-auto-flow: column;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .tag {
@@ -242,9 +242,11 @@ Not being used rn
 	min-height: 100vh;
 	max-height:100vh;
 	}
+	/*Put things here that take up the whole page length */
 	p,
 	ul,
-	.header
+	.header,
+	#blogTags
 	{
 		grid-column-start: 1;
 		grid-column-end: 4;
