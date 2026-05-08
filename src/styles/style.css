@@ -80,7 +80,7 @@ ul{
 }
 
 .tag {
-    margin: .25em;
+	margin: .25em;
     border: dotted 1px #a1a1a1;
     border-radius: .5em;
 	padding: .5em;
@@ -123,17 +123,17 @@ content{
 	}
 		.socials{ /* figure out where the FUCKING padding is coming from LOL =i figured it out unordered lists have auto padding :rolleseyes:*/
 			display:grid;
-				place-content: center;
+			place-content: center;
 			grid-template-columns:
 			 
 			repeat(7,1fr);
-			padding-left: .5em;
-			padding-right: .5em;
+			padding-left: 1em;
+			padding-right: 1em;
 		}
 		.logo,
 		.logoDark{
-			width: 2.5em;
-			height: 2.5em;
+			width: 2em;
+			height: 2em;
 	
 			
 		}

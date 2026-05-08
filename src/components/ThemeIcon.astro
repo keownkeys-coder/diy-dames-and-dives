@@ -9,17 +9,17 @@ import DarkIcon from "./Icons/DarkIcon.astro";
 <button id="themeToggle" aria-label="Toggle theme">
 
   <svg aria-hidden="true" width="5rem" height="5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <LightIcon class="sun" />
-        <DarkIcon class="moon" />
+        <LightIcon />
+        <DarkIcon  />
   </svg>
 </button>
-<style>
+<!-- <style>
   .sun { fill: black; }
   .moon { fill: transparent; }
 
   :global(.dark) .sun { fill: transparent; }
   :global(.dark) .moon { fill: white; }
-</style>
+</style> -->
 <script is:inline>
   const theme = (() => {
     const localStorageTheme = localStorage?.getItem("theme") ?? '';
