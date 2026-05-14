@@ -9,7 +9,7 @@ body{
 	
 }
 	.header{
-		
+		margin:.5em;
 		width: auto;
 		background-color: white;
 		border: 1px solid #ccc;
@@ -18,6 +18,7 @@ body{
 		max-height: 15vh;
 		text-align: center;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 	}
 
 /* nav and side bar */
@@ -27,6 +28,8 @@ body{
 		background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
 		box-sizing:border-box;
 		background-size: cover;
+		margin-left: .5em;
+		padding-left:2px;
 	}
 		.sidebar{
 			
@@ -117,7 +120,7 @@ content{
 		border: 1px solid #ccc;
 		border-radius: 5px;
 
-	
+		margin:.5em;
 		align-self: last baseline;
 		max-height: 15vh;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -127,7 +130,7 @@ content{
 			place-content: center;
 			grid-template-columns:
 			 
-			repeat(7,1fr);
+			repeat(8,1fr);
 			padding-left: 1em;
 			padding-right: 1em;
 		}
@@ -152,16 +155,18 @@ content{
 }
 Not being used rn	
 */
+
   #themeToggle {
     border: 0;
     background: none;
   }
+/*
   .sun { fill: black; }
   .moon { fill: green; }
 
   :global(.dark) .sun { fill: transparent; }
   :global(.dark) .moon { fill: purple; }
-  
+*/
 /*dark css */  
 	html.dark {
 	background-color: #0d0950;
@@ -249,13 +254,11 @@ Not being used rn
 	.header,
 	#blogTags
 	{
-		grid-column-start: 1;
-		grid-column-end: 4;
+		grid-column:1/-1;
 	}
 	h1{
 			grid-row-start: 1;
-		grid-column-start:1;
-		grid-column-end:4;
+		grid-column:1/-1;
 	}
 	.filters{
 		grid-row-start:2;
@@ -271,7 +274,7 @@ Not being used rn
 		
 		display:grid;
 		
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: subgrid;
 		grid-column-gap: 5px;
 		grid-row-gap:5px;
 	grid-auto-rows: minmax(0, auto);
