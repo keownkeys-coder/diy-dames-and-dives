@@ -76,6 +76,23 @@ li{
 ul{
 	padding:0;
 }
+#webcomicList{
+	display:grid;
+	grid-template-columns:auto auto;
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.gridContent{
+	margin: .25em;
+	max-width: 100%;
+	max-height:100%;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+	padding: .5em;
+	background-color: #F8FCFD;
+}
 
 .tags {
     display: flex;
