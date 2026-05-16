@@ -9,17 +9,20 @@ body{
 	
 }
 	.header{
-		margin:.5em;
+		margin:.5em .5em 1em .5em;
 		width: auto;
 		background-color: white;
 		border: 1px solid #ccc;
 		border-radius: 5px;
 		padding:1em;
-		max-height: 15vh;
+		min-height: 15vh;
 		text-align: center;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
 	}
+	#themeToggle {
+    	border: 0;
+    	background: none;
+  	}
 
 /* nav and side bar */
 	#receipt{
@@ -28,7 +31,7 @@ body{
 		background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
 		box-sizing:border-box;
 		background-size: cover;
-		margin-left: .5em;
+		margin: 0 .5em 0 .5em;
 		padding-left:2px;
 	}
 		.sidebar{
@@ -55,14 +58,14 @@ body{
 				text-align: left;
 				flex-direction: column;
 			}
-	:has(.openSidebar[aria-expanded="true"]) #receipt{
+	:has(#openSidebar[aria-expanded="true"]) #receipt{
 		display:block flow;
 		align-self: center;
 	}
-	.openSidebar{
+	#openSidebar{
 		background-color: #F9FAF4;
 		color: #FD9612;
-
+		max-width: min-content;
 	}
 
 /* nav and side bar end*/
@@ -78,7 +81,8 @@ ul{
 }
 #webcomicList{
 	display:grid;
-	grid-template-columns:auto auto;
+	
+	grid-auto-flow: row dense;
 }
 img{
 	max-width: 100%;
@@ -86,8 +90,7 @@ img{
 }
 .gridContent{
 	margin: .25em;
-	max-width: 100%;
-	max-height:100%;
+
     border: dotted 1px #a1a1a1;
     border-radius: .5em;
 	padding: .5em;
@@ -137,9 +140,9 @@ content{
 		border: 1px solid #ccc;
 		border-radius: 5px;
 
-		margin:.5em;
+		margin:2em .5em .5em .5em;
 		align-self: last baseline;
-		max-height: 15vh;
+		min-height: 15vh;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 		.socials{ /* figure out where the FUCKING padding is coming from LOL =i figured it out unordered lists have auto padding :rolleseyes:*/
@@ -147,7 +150,7 @@ content{
 			place-content: center;
 			grid-template-columns:
 			 
-			repeat(8,1fr);
+			repeat(4,1fr);
 			padding-left: 1em;
 			padding-right: 1em;
 		}
@@ -173,10 +176,7 @@ content{
 Not being used rn	
 */
 
-  #themeToggle {
-    border: 0;
-    background: none;
-  }
+
 /*
   .sun { fill: black; }
   .moon { fill: green; }
@@ -197,6 +197,10 @@ Not being used rn
 			color: #000;
 		}
 	}
+	.dark li:hover,
+	.dark li:focus{
+	background-color: gray;
+	}
 	.dark body{
 		color:deeppink;
 		background-color: #0d0950;
@@ -205,9 +209,9 @@ Not being used rn
 	.dark .header{	background-color: blueviolet;
 	
 	box-shadow:
-    0 0 1rem 0.5rem #fff,  /* inner white */
-    0 0 2rem 1rem #f0f, /* middle magenta */
-    0 0 2.5rem 1.5rem #0ff; /* outer cyan */
+    0 0 .5rem 0.25rem #fff,  /* inner white */
+    0 0 1rem .5rem #f0f, /* middle magenta */
+    0 0 1.75rem .75rem #0ff; /* outer cyan */
 	}
 
 	.dark .menu {
@@ -217,12 +221,10 @@ Not being used rn
 
 	.dark .nav-links a:hover,
 	.dark .nav-links a:focus {
-	color: #0d0950;
+	color: gray;
 	}
 
-	.dark .nav-links a {
-	color: #fff;
-	}
+	
 	.dark .logo{
 		display:none;
 	}
@@ -230,14 +232,14 @@ Not being used rn
 		display:inline;
 	}
 	.dark a {
-	color: #ff9776;
+	color:#0ff;
 	}
 /*all above is dark screen */
 /* all below is for desktop screens */
 
 @media screen and (min-width: 636px) {
 	
-	:has(.openSidebar[aria-expanded="true"]) /*stuff to happen when nav button clicked */ { .grid{
+	:has(#openSidebar[aria-expanded="true"]) /*stuff to happen when nav button clicked */ { .grid{
 	display:grid;
 	grid-template-columns: auto;
 	}
@@ -246,6 +248,10 @@ Not being used rn
 
 	}
 }
+	.socials{
+			grid-template-columns:
+			repeat(8,1fr);
+	}	
 	.grid{
 
 

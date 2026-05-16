@@ -1,6 +1,6 @@
 
   
-  const openSidebar = document.querySelector('.openSidebar');
+  const openSidebar = document.getElementById("openSidebar");
   
   openSidebar?.addEventListener('click', ()=>{
     const isExpanded = openSidebar.getAttribute('aria-expanded') === 'true';
