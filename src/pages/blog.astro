@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import RSS_Dark from "../assets/pictures/svg/rss_dark.svg";
+import RSSLogo from "../assets/pictures/svg/rss.svg";
+import Social from '../components/Social.astro';
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection("blog");
 const tags = [...new Set(allPosts.flatMap((post: any) => (post.data.tags)))];
@@ -12,7 +15,7 @@ const pageTitle = "Deranged type Blogalog";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <p>my insane ramblings here for convenience</p>
-  <ul> 
+  <ul> use dot leaders here--
     { 
      allPosts.map((post) => (
       <BlogPost url={`/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate.toLocaleDateString()}/>
@@ -34,6 +37,9 @@ const pageTitle = "Deranged type Blogalog";
                 <li>{tag}</li>
             </a>))}
         </ul>
+        <p> If you'd like to keep up with my blog check it here! 
+                     <Social platform="https://diy-dames-and-dives.netlify.app" usernameID="blog-feed.xml" logo={RSSLogo}darkLogo={RSS_Dark} platformName="RSS Feed" /> 
+        </p>
     </section>
   
 </BaseLayout>

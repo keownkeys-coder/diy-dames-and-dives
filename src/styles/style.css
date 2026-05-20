@@ -29,34 +29,34 @@ body{
 		display:none;
 		align-content:center;
 		background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
-		box-sizing:border-box;
+		
 		background-size: cover;
 		margin: 0 .5em 0 .5em;
-		padding-left:2px;
+		padding-left:.25em;
 	}
 		.sidebar{
 			
-			display: flex;
-			justify-content: start;
+			
 			font-size: large;
 			color:black;
 			text-align:center;
 			font-family: "Times New Roman",Times;
-			align-items: stretch;
-			flex-direction: column;
+			
+			
 			
 		}
 			.dots{
 
 			border-bottom: 2px dotted black;
-			margin: 0 .5em .5em;
+			margin: 0 .25em .25em;
 
 			}
-			.nav{
-				display:inherit;
-				justify-content: space-evenly;
+			.links{ /* make into three columns, one for item, dots and then checcklist */
+				display:grid;
+				grid-template-columns: max-content 1fr 20px;
 				text-align: left;
-				flex-direction: column;
+				justify-content: space-between;
+				
 			}
 	:has(#openSidebar[aria-expanded="true"]) #receipt{
 		display:block flow;
@@ -149,10 +149,18 @@ content{
 			display:grid;
 			place-content: center;
 			grid-template-columns:
-			 
-			repeat(4,1fr);
+			
+			repeat(8,1fr);
+			
 			padding-left: 1em;
 			padding-right: 1em;
+			> * {
+				grid-column-end: span 2;
+			}
+
+			> :first-child {
+				grid-column-start: 2;
+			}	
 		}
 		.logo,
 		.logoDark{
@@ -247,10 +255,20 @@ Not being used rn
 	display:none;
 
 	}
-}
+} 
+/*end stuff that happens when receipt opens closes */
 	.socials{
 			grid-template-columns:
-			repeat(8,1fr);
+			repeat(7,1fr);
+			
+						> * {
+				grid-column-end: span 1;
+			}
+
+			> :first-child {
+				grid-column-start: 1;
+			}	
+			
 	}	
 	.grid{
 
@@ -267,9 +285,10 @@ Not being used rn
 	
 	position: sticky;
 	top:0;
-	display: flex;
+	display: block;
 	min-height: 100vh;
 	max-height:100vh;
+	min-width: 20vw;
 	}
 	/*Put things here that take up the whole page length */
 	p,
@@ -304,8 +323,8 @@ Not being used rn
 	}
 	.footer{
 		order:1;
-		
-		
+		place-content: center;
+		margin: 2em 0 0 0;
 		grid-column-start: 1;
 		grid-column-end: 4;
 

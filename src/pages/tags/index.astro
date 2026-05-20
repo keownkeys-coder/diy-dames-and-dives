@@ -5,6 +5,10 @@ const allPosts = await getCollection("blog");
 const tags = [...new Set(allPosts.flatMap((post: any) => (post.data.tags)))];
 const authors = [...new Set(allPosts.flatMap((post: any) => (post.data.author)))];
 const pageTitle = "Tag Index";
+//sort chronological below vvv
+//const allPosts = [...posts, ...guestPosts].sort(
+//  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+//)
 ---
 
 <BaseLayout {pageTitle}>
