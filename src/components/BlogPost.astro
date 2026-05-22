@@ -1,9 +1,9 @@
 ---
 const { title, url, pubDate } = Astro.props
 ---
-<a href={url}><li>
-    <span id="blogPosts">{title}</span> <!--left-->
-<!--     <div class="dots"></div>    center-->
-    <span>{pubDate}</span> <!--//right-->
+<a href={url}><li  class ="dotLeaders">
+    <span class="left">{title}</span> <!--left-->
+    
+    <span class="right">{pubDate}</span> <!--//right-->
     
 </li></a>

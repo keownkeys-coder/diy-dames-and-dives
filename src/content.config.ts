@@ -25,7 +25,8 @@ const blog = defineCollection({
 
 //collection for gallery?
 const gallery = defineCollection({
-  type:"data",
+  loader: glob({ pattern: '**/[^_]*.jpg', base: "./src/gallery"}),
+//  type:"data",
   schema: ({ image }) =>
     z.object({
       title: z.string(),

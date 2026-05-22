@@ -1,63 +1,104 @@
-:root { 
-  	overscroll-behavior: none;/* stop bounce */
-}
-body{
-	font-size:1em;
-	color:#fca431;
-	background-color:#f4f5ee;
-	font-style:normal;
-	
-}
-	.header{
-		margin:.5em .5em 1em .5em;
-		width: auto;
-		background-color: white;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		padding:1em;
-		min-height: 15vh;
-		text-align: center;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* everything CSS rules */	
+	:root { 
+		overscroll-behavior: none;/* stop bounce */
 	}
+	body{
+		font-size:1em;
+		color:#fca431;
+		background-color:#f4f5ee;
+		font-style:normal;
+		
+	}
+.header{
+	margin:.5em .5em 1em .5em;
+	width: auto;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding:1em;
+	min-height: 15vh;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 	#themeToggle {
     	border: 0;
     	background: none;
   	}
 
 /* nav and side bar */
-	#receipt{
-		display:none;
-		align-content:center;
-		background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
+#receipt{
+	display:none;
+	align-content:start;
+	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
+
+	background-size: cover;
+	margin: 0 .5em 0 .5em;
+	padding-left:.25em;
+	
+}
+	.sidebar{
 		
-		background-size: cover;
-		margin: 0 .5em 0 .5em;
-		padding-left:.25em;
+		
+		font-size: large;
+		color:black;
+		text-align:center;
+		font-family: "Times New Roman",Times;
+		display: grid;
+		align-items: start;
+
+		
+		
+		
 	}
-		.sidebar{
-			
-			
-			font-size: large;
-			color:black;
-			text-align:center;
-			font-family: "Times New Roman",Times;
-			
-			
-			
+		.dots{
+		
+		border-bottom: 2px dotted black;
+		margin: 0 .25em .25em;
+		
 		}
-			.dots{
 
-			border-bottom: 2px dotted black;
-			margin: 0 .25em .25em;
-
+		.dotLeaders{
+			display: grid;
+			grid-template-columns: auto max-content;
+			grid-template-areas: "left right";
+			align-items: end;
+			text-align: left;
+			margin:.1em 0 0 .1em;
+			gap: 0 .25rem; /* customize the gap to your needs */
 			}
-			.links{ /* make into three columns, one for item, dots and then checcklist */
-				display:grid;
-				grid-template-columns: max-content 1fr 20px;
-				text-align: left;
-				justify-content: space-between;
-				
+			.left{
+				grid-area: left;
+				position: relative;
+				overflow: hidden;	
 			}
+			.left::after{
+				position: absolute;
+				padding-left: .25ch; /* customise the padding to your needs */
+				/* adjust the amount of dots to your needs */
+				content: " . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . ";
+				text-align: right; /* optional, can be removed */
+			}
+			.right{
+				grid-area: right;
+				margin-right: .5em;
+			}
+			/* .dots::before {
+			display: block;
+			height:1em;
+			overflow: hidden;
+			text-overflow: clip;
+			content: 
+				". . . . . . . . . . . . . . . . . . . . "
+				". . . . . . . . . . . . . . . . . . . . "
+				". . . . . . . . . . . . . . . . . . . . "
+				". . . . . . . . . . . . . . . . . . . . "
+				". . . . . . . . . . . . . . . . . . . . "
+				". . . . . . . . . . . . . . . . . . . . ";
+			} */
 	:has(#openSidebar[aria-expanded="true"]) #receipt{
 		display:block flow;
 		align-self: center;
@@ -69,6 +110,10 @@ body{
 	}
 
 /* nav and side bar end*/
+.tunes{
+	display: grid;
+	grid-template-columns: subgrid;
+}
 li:hover,
 li:focus{
 	background-color:yellow;
@@ -288,13 +333,14 @@ Not being used rn
 	display: block;
 	min-height: 100vh;
 	max-height:100vh;
-	min-width: 20vw;
+	min-width: 22vw;
 	}
 	/*Put things here that take up the whole page length */
 	p,
 	ul,
 	.header,
-	#blogTags
+	#blogTags,
+	.tags
 	{
 		grid-column:1/-1;
 	}

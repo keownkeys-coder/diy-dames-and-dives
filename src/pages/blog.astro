@@ -15,7 +15,7 @@ const pageTitle = "Deranged type Blogalog";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <p>my insane ramblings here for convenience</p>
-  <ul> use dot leaders here--
+  <ul>
     { 
      allPosts.map((post) => (
       <BlogPost url={`/posts/${post.id}/`} title={post.data.title} pubDate={post.data.pubDate.toLocaleDateString()}/>
