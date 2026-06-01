@@ -75,7 +75,12 @@
 				position: absolute;
 				padding-left: .25ch; /* customise the padding to your needs */
 				/* adjust the amount of dots to your needs */
-				content: " . . . . . . . . . . . . . . . . . . . "
+				content: "......................................"
+					"......................"
+					". . . . . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . "
+					". . . . . . . . . . . . . . . . . . . . . . . "
+				" . . . . . . . . . . . . . . . . . . . "
 					". . . . . . . . . . . . . . . . . . . . . . . "
 					". . . . . . . . . . . . . . . . . . . . . . . "
 					". . . . . . . . . . . . . . . . . . . . . . . "
@@ -134,12 +139,20 @@ img{
 	max-height: 100%;
 }
 .gridContent{
-	margin: .25em;
+  border-image-repeat: round;
+  border-image-slice: 150 200 200 200 fill;
+  border-image-source: url(../assets/pictures/paper.png);
+  border-image-width:65px 65px 115px 125px;
+  margin: .25em;
+  padding: 3em .5em 1em .5em;
+  color:black;
+/*	
 
     border: dotted 1px #a1a1a1;
     border-radius: .5em;
-	padding: .5em;
+	
 	background-color: #F8FCFD;
+*/
 }
 
 .tags {
