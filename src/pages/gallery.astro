@@ -1,9 +1,21 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts = await getCollection("gallery");
+//const photos = [...new Set(allPosts.flatMap())];
+//const drawings = [...new Set(allPosts.flatMap((post: any) => (post.data.author)))];
+const pageTitle = "Gallery";
+//sort chronological below vvv
+//const allPosts = [...posts, ...guestPosts].sort(
+//  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+//)
 ---
-<BaseLayout>drawings
-    pictures
 
-
+<BaseLayout {pageTitle}>
+    <section class="responsiveGrid">
+        <ul>
+       
+        </ul>
+    </section>
 
 </BaseLayout>

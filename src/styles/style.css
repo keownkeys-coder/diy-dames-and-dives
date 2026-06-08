@@ -9,6 +9,12 @@
 		font-style:normal;
 		
 	}
+	.grid{
+	display:grid;
+	grid-template-columns:1fr;
+	grid-column-gap: 5px;
+	min-width:0;
+	}
 .header{
 	margin:.5em .5em 1em .5em;
 	width: auto;
@@ -30,10 +36,11 @@
 	display:none;
 	align-content:start;
 	background:beige url(../assets/pictures/sidebar.jpg) center/ 50vh no-repeat ;
-
+	font-size: large;
 	background-size: cover;
 	margin: 0 .5em 0 .5em;
 	padding-left:.25em;
+	max-width: 300px;
 	
 }
 	.sidebar{
@@ -77,8 +84,8 @@
 				/* adjust the amount of dots to your needs */
 				content: "......................................"
 					"......................"
-					". . . . . . . . . . . . . . . . . . . . . . . "
-					". . . . . . . . . . . . . . . . . . . . . . . "
+					"......................."
+					"......................."
 					". . . . . . . . . . . . . . . . . . . . . . . "
 				" . . . . . . . . . . . . . . . . . . . "
 					". . . . . . . . . . . . . . . . . . . . . . . "
@@ -115,10 +122,14 @@
 	}
 
 /* nav and side bar end*/
+
 .tunes{
+container-type: inline-size;
+	/*
 	display: grid;
-	grid-template-columns: subgrid;
+	grid-template-columns: subgrid;*/
 }
+	
 li:hover,
 li:focus{
 	background-color:yellow;
@@ -129,17 +140,41 @@ li{
 ul{
 	padding:0;
 }
-#webcomicList{
-	display:grid;
+.responsiveGrid{ /*https://codepen.io/ramenhog/pen/dvZVda figure out why this iiiis not working in the mobile mode*/
+  column-count: 1;
+  column-gap: 0;
+  counter-reset: item-counter;
+  
+  
+  @container (min-width: 500px) {
+    column-count: 2;
+  }
+   
+  
+  @container (min-width: 700px) {
+    column-count: 3;
+  }
+  
+  @container (min-width: 900px) {
+    column-count: 4;
+  }
+  
+  @container (min-width: 1100px) {
+    column-count: 5;
+  }
 	
-	grid-auto-flow: row dense;
 }
+
 img{
 	max-width: 100%;
 	max-height: 100%;
 }
 .gridContent{
-  border-image-repeat: round;
+	box-sizing: border-box;
+  	break-inside: avoid;
+  	padding: 10px;
+  	counter-increment: item-counter;
+  border-image-repeat: repeat;
   border-image-slice: 150 200 200 200 fill;
   border-image-source: url(../assets/pictures/paper.png);
   border-image-width:65px 65px 115px 125px;
@@ -371,15 +406,18 @@ Not being used rn
 		grid-column-start:1;
 		grid-column-end:4;
 	}
+	
 	.tunes{
-		
+		container-type: inline-size;
+		/*
 		display:grid;
 		
 		grid-template-columns: subgrid;
 		grid-column-gap: 5px;
 		grid-row-gap:5px;
-	grid-auto-rows: minmax(0, auto);
+	grid-auto-rows: minmax(0, auto); */
 	}
+	
 	.footer{
 		order:1;
 		place-content: center;
