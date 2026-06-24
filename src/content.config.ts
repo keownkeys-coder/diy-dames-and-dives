@@ -24,8 +24,8 @@ const blog = defineCollection({
 //export const collections = { blog };
 
 //collection for gallery?
-const gallery = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.jpg', base: "./src/gallery"}),
+const photos = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.jpg', base: "./src/gallery/photos/"}),
 //  type:"data",
   schema: ({ image }) =>
     z.object({
@@ -35,4 +35,15 @@ const gallery = defineCollection({
     }),
 });
 
-export const collections = { gallery, blog };
+const drawings = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.jpg', base: "./src/gallery/drawings/"}),
+//  type:"data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      cover: image(),
+    }),
+});
+
+export const collections = { photos, blog, drawings };

@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await getCollection("gallery");
+const allPhotos = await getCollection("photos");
+const allDrawings = await getCollection("drawings");
 //const photos = [...new Set(allPosts.flatMap())];
 //const drawings = [...new Set(allPosts.flatMap((post: any) => (post.data.author)))];
 const pageTitle = "Gallery";
@@ -12,8 +13,8 @@ const pageTitle = "Gallery";
 ---
 
 <BaseLayout {pageTitle}>
-    <section class="responsiveGrid">
-        <ul>
+    <section >
+        <ul class="responsiveGrid">
        
         </ul>
     </section>

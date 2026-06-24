@@ -2,6 +2,7 @@
 	:root { 
 		overscroll-behavior: none;/* stop bounce */
 	}
+	
 	body{
 		font-size:1em;
 		color:#fca431;
@@ -9,13 +10,23 @@
 		font-style:normal;
 		
 	}
+	.dark body{
+		color:deeppink;
+		background-color: #0d0950;
+	}
+	html.dark {
+		background-color: #0d0950;
+		color: #fff;
+	}
+
 	.grid{
 	display:grid;
 	grid-template-columns:1fr;
 	grid-column-gap: 5px;
 	min-width:0;
 	}
-.header{
+.header,
+.footer{
 	margin:.5em .5em 1em .5em;
 	width: auto;
 	background-color: white;
@@ -26,6 +37,16 @@
 	text-align: center;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.dark footer,
+.dark .header{	
+	background-color: blueviolet;
+	box-shadow:
+    0 0 .5rem 0.25rem #fff,  /* inner white */
+    0 0 1rem .5rem #f0f, /* middle magenta */
+    0 0 1.75rem .75rem #0ff; /* outer cyan */
+}
+
 	#themeToggle {
     	border: 0;
     	background: none;
@@ -42,6 +63,13 @@
 	padding-left:.25em;
 	max-width: 300px;
 	
+}
+.dark #receipt{
+	background: hotpink;
+	color: #000;
+	a{
+		color: #000;
+	}
 }
 	.sidebar{
 		
@@ -165,10 +193,6 @@ ul{
 	
 }
 
-img{
-	max-width: 100%;
-	max-height: 100%;
-}
 .gridContent{
 	box-sizing: border-box;
   	break-inside: avoid;
@@ -188,6 +212,28 @@ img{
 	
 	background-color: #F8FCFD;
 */
+}
+.dark .gridContent{
+		@property --angle {
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
+}@keyframes rotate-border {
+to {
+--angle: 360deg;
+}
+}.your-element {
+--angle: 0deg;
+border: 6px solid transparent;
+border-radius: 16px;
+border-image: conic-gradient(from var(--angle), #00c9a7, #845ec2, #ff9671, #00c9a7) 1;
+animation: rotate-border 4s linear infinite;
+}
+}
+
+img{
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .tags {
@@ -228,15 +274,9 @@ content{
 	display:none;
 }
 	footer{
-		
-		background-color: white;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-
 		margin:2em .5em .5em .5em;
 		align-self: last baseline;
-		min-height: 15vh;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 	}
 		.socials{ /* figure out where the FUCKING padding is coming from LOL =i figured it out unordered lists have auto padding :rolleseyes:*/
 			display:grid;
@@ -286,34 +326,13 @@ Not being used rn
   :global(.dark) .moon { fill: purple; }
 */
 /*dark css */  
-	html.dark {
-	background-color: #0d0950;
-	color: #fff;
-	}
 
-	.dark #receipt{
-		background: hotpink;
-		color: #000;
-		a{
-			color: #000;
-		}
-	}
+
 	.dark li:hover,
 	.dark li:focus{
 	background-color: gray;
 	}
-	.dark body{
-		color:deeppink;
-		background-color: #0d0950;
-	}
-	.dark footer,
-	.dark .header{	background-color: blueviolet;
-	
-	box-shadow:
-    0 0 .5rem 0.25rem #fff,  /* inner white */
-    0 0 1rem .5rem #f0f, /* middle magenta */
-    0 0 1.75rem .75rem #0ff; /* outer cyan */
-	}
+
 
 	.dark .menu {
 	background-color: #fff;
@@ -335,6 +354,7 @@ Not being used rn
 	.dark a {
 	color:#0ff;
 	}
+
 /*all above is dark screen */
 /* all below is for desktop screens */
 
