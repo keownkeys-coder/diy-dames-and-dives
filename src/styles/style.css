@@ -213,7 +213,11 @@ ul{
 	background-color: #F8FCFD;
 */
 }
-.dark .gridContent{
+
+.dark .gridContent{ 
+border-image: none;	
+}
+	/*
 		@property --angle {
 syntax: '<angle>';
 initial-value: 0deg;
@@ -221,16 +225,17 @@ inherits: false;
 }@keyframes rotate-border {
 to {
 --angle: 360deg;
-}
+} 
 }.your-element {
 --angle: 0deg;
 border: 6px solid transparent;
 border-radius: 16px;
 border-image: conic-gradient(from var(--angle), #00c9a7, #845ec2, #ff9671, #00c9a7) 1;
 animation: rotate-border 4s linear infinite;
-}
-}
+} 
 
+}
+*/
 img{
 	max-width: 100%;
 	max-height: 100%;
@@ -250,6 +255,10 @@ img{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+.dark .tag{
+	background-image:none;
+	background-color: white;
 }
 
 h1,
