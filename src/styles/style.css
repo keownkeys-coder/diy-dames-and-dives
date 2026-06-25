@@ -243,12 +243,13 @@ img{
 }
 
 .tag {
-	margin: .25em;
-    border: dotted 1px #a1a1a1;
+	margin: .5em;
     border-radius: .5em;
 	padding: .5em;
-	background-color: #F8FCFD;
-	
+	background-image: url(../assets/pictures/pot.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 h1,
@@ -297,8 +298,8 @@ content{
 		}
 		.logo,
 		.logoDark{
-			width: 2em;
-			height: 2em;
+			width: 4em;
+			height: 4em;
 	
 			
 		}
